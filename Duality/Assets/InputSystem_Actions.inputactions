@@ -40,7 +40,7 @@
                 {
                     "name": "WASD",
                     "id": "00ca640b-d935-4593-8157-c05846ea39b3",
-                    "path": "Dpad",
+                    "path": "Dpad(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -106,7 +106,7 @@
                 {
                     "name": "ArrowKeys",
                     "id": "13675b51-12ea-4d53-bb31-f3e87a3cb663",
-                    "path": "Dpad",
+                    "path": "Dpad(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

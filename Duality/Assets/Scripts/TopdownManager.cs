@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TopdownManager : MonoBehaviour
 {
-    [SerializeField] private float gridSize = 0.5f;
+    public float gridSize = 0.5f;
     public static TopdownManager instance { get; private set; }
 
     private void Awake()
@@ -24,6 +24,6 @@ public class TopdownManager : MonoBehaviour
             obj.position.y,
             Mathf.Round(obj.position.z / gridSize) * gridSize
         );
-        obj.position = Vector3.Lerp(obj.position, targetPos, 10 * Time.fixedDeltaTime);
+        obj.position = Vector3.Lerp(obj.position, targetPos, 10 * Time.deltaTime);
     }
 }
