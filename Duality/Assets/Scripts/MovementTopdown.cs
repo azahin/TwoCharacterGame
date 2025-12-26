@@ -4,11 +4,9 @@ using UnityEngine.InputSystem;
 
 public class MovementTopdown : MovementBase
 {
-    [SerializeField] private float moveDuration = 0.01f;
-    [SerializeField] private float inputBufferTime = 0.1f;
+    [SerializeField] private float moveDuration;
 
     private bool isMoving = false;
-    private float inputBuffer = 0.0f;
 
     protected override void GetInput(InputAction.CallbackContext context)
     {
