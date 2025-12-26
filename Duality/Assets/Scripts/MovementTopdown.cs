@@ -36,7 +36,7 @@ public class MovementTopdown : MovementBase
         float moveTime = 0.0f;
         while (moveTime < moveDuration)
         {
-            transform.position = Vector3.Lerp(startPos, targetPos, moveTime / moveDuration);
+            transform.position = Vector3.Lerp(startPos, targetPos, Mathf.Pow(moveTime / moveDuration, 0.3f));
             moveTime += Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
