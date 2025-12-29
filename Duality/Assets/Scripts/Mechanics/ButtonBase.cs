@@ -11,7 +11,7 @@ public class ButtonBase : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Box"))
         {
             transform.position = new Vector3 (transform.position.x, transform.position.y - (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
             door.Open();
@@ -21,7 +21,7 @@ public class ButtonBase : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Box"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
             door.Close();
