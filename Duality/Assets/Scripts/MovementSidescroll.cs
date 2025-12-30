@@ -24,7 +24,7 @@ public class MovementSidescroll : MovementBase
         );
     }
 
-    protected override void Move(Vector3 direction)
+    protected override void Move(Vector2 direction)
     {
         rb.AddForceX(direction.x * moveForce, ForceMode2D.Force);
         rb.AddForceX(-rb.linearVelocity.x * dragHorizontal, ForceMode2D.Force);
