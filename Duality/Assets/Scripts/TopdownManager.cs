@@ -1,29 +1,45 @@
 using UnityEngine;
+using System.Collections;
 
 public class TopdownManager : MonoBehaviour
 {
-    public float gridSize = 0.5f;
-    public static TopdownManager instance { get; private set; }
+    private float gridSize = 0.5f;
+    [SerializeField] private float moveDuration = 0.6f;
+    public static TopdownManager Instance { get; private set; }
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             return;
         }
         Destroy(gameObject);
     }
 
-    public void SnapToGrid(Transform obj)
+    private void SnapToGrid(Transform obj)
     {
         if (obj == null) return;
 
-        Vector3 targetPos = new Vector3(
+        Vector2 targetPos = new Vector2(
             Mathf.Round(obj.position.x / gridSize) * gridSize,
-            obj.position.y,
-            Mathf.Round(obj.position.z / gridSize) * gridSize
+            Mathf.Round(obj.position.y / gridSize) * gridSize
         );
-        obj.position = Vector3.Lerp(obj.position, targetPos, 10 * Time.deltaTime);
+        obj.position = Vector2.Lerp(obj.position, targetPos, 10 * Time.deltaTime);
+    }
+
+    public IEnumerator MoveCell(Transform obj, Vector2 direction)
+    {
+        Vector2 startPos = obj.position;
+        Vector2 targetPos = startPos + direction * gridSize;
+
+        float moveTime = 0.0f;
+        while (moveTime < moveDuration)
+        {
+            obj.position = Vector2.Lerp(startPos, targetPos, Mathf.Pow(moveTime / moveDuration, 0.3f));
+            moveTime += Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        SnapToGrid(obj);
     }
 }

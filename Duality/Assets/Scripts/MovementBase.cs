@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public abstract class MovementBase : MonoBehaviour
 {
     protected Rigidbody2D rb;
-    protected Vector3 direction;
+    protected Vector2 direction;
     [SerializeField] protected InputActionReference moveInput;
 
     private void Awake()
@@ -33,9 +33,9 @@ public abstract class MovementBase : MonoBehaviour
 
     private void CancelInput(InputAction.CallbackContext context)
     {
-        direction = Vector3.zero;
+        direction = Vector2.zero;
     }
 
     protected abstract void GetInput(InputAction.CallbackContext context);
-    protected abstract void Move(Vector3 direction);
+    protected abstract void Move(Vector2 direction);
 }
