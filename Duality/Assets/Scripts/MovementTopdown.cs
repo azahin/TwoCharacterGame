@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class MovementTopdown : MovementBase {
     [SerializeField] private float moveSpeed;
     private Transform movePoint;
+    private float resetTimer = 0.0f;
 
     private void Start() {
         movePoint = transform.GetChild(0);
@@ -21,7 +23,18 @@ public class MovementTopdown : MovementBase {
     protected override void Move(Vector2 direction) {
         rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
         Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
-        if (Vector3.Distance(transform.position, movePoint.position) > 0.05f) return;
+
+        if (resetTimer < 0.0f) {
+            resetTimer = 0.0f;
+            movePoint.position = transform.position;
+            TopdownManager.Instance.SnapToGrid(rb);
+        }
+        if (Vector3.Distance(transform.position, movePoint.position) > 0.05f) {
+            resetTimer -= Time.deltaTime;
+            return;
+        } else {
+            resetTimer = 0.3f;
+        }
         if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
         
         movePoint.position += dir * TopdownManager.Instance.gridSize;

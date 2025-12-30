@@ -1,9 +1,7 @@
 using UnityEngine;
-using System.Collections;
 
 public class TopdownManager : MonoBehaviour {
     public float gridSize = 0.5f;
-    [SerializeField] private float moveDuration = 0.6f;
     public static TopdownManager Instance { get; private set; }
 
     private void Awake() {
@@ -15,7 +13,7 @@ public class TopdownManager : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    private void SnapToGrid(Rigidbody2D rb) {
+    public void SnapToGrid(Rigidbody2D rb) {
         if (rb == null) return;
 
         Vector2 targetPos = new Vector2(
