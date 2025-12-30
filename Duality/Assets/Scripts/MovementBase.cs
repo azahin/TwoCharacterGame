@@ -1,38 +1,32 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public abstract class MovementBase : MonoBehaviour
-{
+public abstract class MovementBase : MonoBehaviour {
     protected Rigidbody2D rb;
-    protected Vector2 direction;
+    protected Vector2 direction = Vector2.zero;
     [SerializeField] protected InputActionReference moveInput;
 
-    private void Awake()
-    {
+    private void Awake() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         Move(direction);
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         moveInput.action.Enable();
         moveInput.action.performed += GetInput;
         moveInput.action.canceled += CancelInput;
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         moveInput.action.performed -= GetInput;
         moveInput.action.canceled -= CancelInput;
         moveInput.action.Disable();
     }
 
-    private void CancelInput(InputAction.CallbackContext context)
-    {
+    protected virtual void CancelInput(InputAction.CallbackContext context) {
         direction = Vector2.zero;
     }
 
