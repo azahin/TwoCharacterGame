@@ -459,6 +459,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1427615651}
     - target: {fileID: 4102527155829865998, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102527155829865998, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: moveDuration
       value: 0.1
       objectReference: {fileID: 0}
@@ -472,13 +476,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6696250294191038829, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6696250294191038829, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696250294191038829, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5316663058455194284, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1233684507}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4742516606084190832, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508210602}
   m_SourcePrefab: {fileID: 100100000, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+--- !u!4 &1069309895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+  m_PrefabInstance: {fileID: 1069309894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072146969
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +605,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1233684506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233684507}
+  m_Layer: 2
+  m_Name: TargetPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1233684507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233684506}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1069309895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1427615651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +650,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
+--- !u!1 &1508210597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742516606084190832, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+  m_PrefabInstance: {fileID: 1069309894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1508210602
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508210597}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &1586523163
 GameObject:
   m_ObjectHideFlags: 0

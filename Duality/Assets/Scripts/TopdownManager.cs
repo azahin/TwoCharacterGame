@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class TopdownManager : MonoBehaviour {
-    private float gridSize = 0.5f;
+    public float gridSize = 0.5f;
     [SerializeField] private float moveDuration = 0.6f;
     public static TopdownManager Instance { get; private set; }
 

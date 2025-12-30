@@ -2,9 +2,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MovementTopdown : MovementBase {
-    [SerializeField] private float moveForce;
-    [SerializeField] private float moveTime;
-    private float currentTime = 0.0f;
+    [SerializeField] private float moveSpeed;
+    private Transform movePoint;
+
+    private void Start() {
+        movePoint = transform.GetChild(0);
+        movePoint.parent = null;
+    }
 
     protected override void GetInput(InputAction.CallbackContext context) {
         Vector2 input = context.ReadValue<Vector2>();
@@ -14,20 +18,12 @@ public class MovementTopdown : MovementBase {
             direction.y = Mathf.Sign(input.y);
     }
 
-    protected override void CancelInput(InputAction.CallbackContext context) {
-        base.CancelInput(context);
-    }
-
     protected override void Move(Vector2 direction) {
-        currentTime -= Time.deltaTime;
-        if (currentTime < 0.0f) {
-            currentTime = 0.0f;
-            rb.linearVelocity = Vector2.zero;
-        }
-
-        if (rb.linearVelocity == Vector2.zero) {
-            rb.AddForce(direction * moveForce, ForceMode2D.Impulse);
-            currentTime = moveTime;
-        }
+        rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
+        Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
+        if (Vector3.Distance(transform.position, movePoint.position) > 0.05f) return;
+        if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
+        
+        movePoint.position += dir * TopdownManager.Instance.gridSize;
     }
 }
