@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBase
       objectReference: {fileID: 0}
+    - target: {fileID: 4090350967839772298, guid: eea58e89ccf9952f4adc3ea78fbf2933, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1072432688}
     - target: {fileID: 5575266156753694003, guid: eea58e89ccf9952f4adc3ea78fbf2933, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.1
@@ -3374,15 +3378,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1764547871 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7437957338236534400, guid: 2998824624e5dfd43b044cbbcbb12660, type: 3}
-  m_PrefabInstance: {fileID: 1108227909847349807}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1764547872 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 23053616873277164, guid: 2998824624e5dfd43b044cbbcbb12660, type: 3}
-  m_PrefabInstance: {fileID: 1108227909847349807}
+  m_CorrespondingSourceObject: {fileID: 4090350967839772298, guid: eea58e89ccf9952f4adc3ea78fbf2933, type: 3}
+  m_PrefabInstance: {fileID: 21776267}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467770691}
   m_Enabled: 1
@@ -4366,6 +4365,7 @@ SceneRoots:
   - {fileID: 116908661}
   - {fileID: 21776267}
   - {fileID: 778715340}
+  - {fileID: 5535472957929624052}
   - {fileID: 218506151}
   - {fileID: 1202392810}
   - {fileID: 3657114341022621302}
