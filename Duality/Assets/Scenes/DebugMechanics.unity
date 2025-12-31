@@ -141,17 +141,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 180962533010842353, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785131593621054959, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 785131593621054959, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
+      propertyPath: moveForce
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 785131593621054959, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: moveInput
       value: 
       objectReference: {fileID: 10396435}
+    - target: {fileID: 785131593621054959, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
+      propertyPath: dragHorizontal
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1376063867879427943, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: m_Name
       value: Player Sidescroll
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376063867879427943, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2788848686968521172, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,10 +585,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3644547208807690154, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
-      propertyPath: m_Radius
-      value: 0.45
-      objectReference: {fileID: 0}
     - target: {fileID: 4102527155829865998, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: moveInput
       value: 
@@ -584,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 4742516606084190832, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_Name
       value: Player Topdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696250294191038829, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -719,7 +731,7 @@ GameObject:
   - component: {fileID: 1586523167}
   - component: {fileID: 1586523166}
   - component: {fileID: 1586523168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,10 +1250,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 1072146973}
   - {fileID: 551639328}
-  - {fileID: 217150793}
   - {fileID: 1586523165}
   - {fileID: 598384200}
   - {fileID: 1891504579}
+  - {fileID: 217150793}
   - {fileID: 1069309894}
   - {fileID: 1882367182}
   - {fileID: 8225755912443387919}

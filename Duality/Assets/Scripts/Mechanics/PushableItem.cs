@@ -7,7 +7,6 @@ public class PushableItem : MonoBehaviour {
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
-        rb.mass = 0.01f;
     }
 
     private void FixedUpdate() {
@@ -24,10 +23,12 @@ public class PushableItem : MonoBehaviour {
     public void ToTopdown() {
         gridLocked = true;
         rb.gravityScale = 0.0f;
+        rb.mass = 0.01f;
     }
 
     public void ToSidescroll() {
         gridLocked = false;
         rb.gravityScale = 1.0f;
+        rb.mass = 0.2f;
     }
 }
