@@ -25,7 +25,13 @@ public class MovementSidescroll : MovementBase {
         rb.AddForceX(direction.x * moveForce, ForceMode2D.Force);
         rb.AddForceX(-rb.linearVelocity.x * dragHorizontal, ForceMode2D.Force);
 
-        bool isGrounded = Physics2D.CircleCast(transform.position, body.radius, Vector2.down, 0.1f, 8);
+        bool isGrounded = Physics2D.CircleCast(
+            transform.position,
+            body.radius,
+            Vector2.down,
+            0.1f,
+            LayerMask.GetMask("Obstacle", "Pushable")
+        );
         if (isGrounded && (direction.y > 0.9f)) {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0.0f);
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
