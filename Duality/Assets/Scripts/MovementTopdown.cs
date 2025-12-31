@@ -27,13 +27,14 @@ public class MovementTopdown : MovementBase {
         if (resetTimer < 0.0f) {
             resetTimer = 0.0f;
             movePoint.position = transform.position;
-            TopdownManager.Instance.SnapToGrid(rb);
         }
         if (Vector3.Distance(transform.position, movePoint.position) > 0.05f) {
             resetTimer -= Time.deltaTime;
             return;
         } else {
             resetTimer = 0.3f;
+            TopdownManager.Instance.SnapToGrid(rb);
+            rb.linearVelocity = Vector3.zero;
         }
         if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
         
