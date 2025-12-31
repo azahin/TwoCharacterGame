@@ -7,7 +7,6 @@ public class ButtonBase : MonoBehaviour
     [SerializeField] private float pressDis = 0.1f;
 
     [SerializeField] private DoorBase door;
-    [SerializeField] private GameObject player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
