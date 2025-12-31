@@ -977,6 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218506151}
   - component: {fileID: 218506152}
+  - component: {fileID: 218506153}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1012,6 +1013,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopdownManager
   moveDuration: 0.6
+--- !u!114 &218506153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218506150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a936a4318399ece48b68721cabb6dc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceManager
+  movementValue: 0
 --- !u!1 &269008045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,6 +3373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BarBase
   movementRange: 0
   valueIncrease: 1
+  manager: {fileID: 218506153}
 --- !u!4 &1717354967
 Transform:
   m_ObjectHideFlags: 0

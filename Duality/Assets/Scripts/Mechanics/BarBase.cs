@@ -6,9 +6,12 @@ public class BarBase : MonoBehaviour
 
     public int valueIncrease = 1;
 
+    [SerializeField] private ResourceManager manager;
+
     public void AddValue()
     {
         movementRange += valueIncrease;
-        Debug.Log(movementRange);
+        manager.AddValue(valueIncrease);
+        Debug.Log(manager.GetValue());
     }
 }
