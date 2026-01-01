@@ -11,7 +11,7 @@ public class BarBase : MonoBehaviour
     public void AddValue()
     {
         movementRange += valueIncrease;
-        manager.AddValue(valueIncrease);
+        manager.AddValue();
         Debug.Log(manager.GetValue());
     }
 }

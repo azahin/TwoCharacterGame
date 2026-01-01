@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    public int movementValue = 0;
+    private int movementValue = 0;
     public static ResourceManager Instance { get; set; }
+
+    [SerializeField] private int increase = 1;
     private void Awake()
     {
         if (Instance == null)
@@ -15,17 +17,20 @@ public class ResourceManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void AddValue(int value)
+    public void AddValue()
     {
-        movementValue += value;
+        movementValue += increase;
     }
 
-    public void RemoveValue(int value)
+    public bool UseValue(int value)
     {
+        bool endState = false;
         if (movementValue >= 0)
         {
             movementValue -= value;
+            endState = true;
         }
+        return endState;
     }
 
     public int GetValue()
