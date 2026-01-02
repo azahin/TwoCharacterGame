@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6193662842041555331}
   - component: {fileID: 3891861295605907012}
   - component: {fileID: 23053616873277164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door1
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -151,3 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42a35895c91c7c44b94ff9a1a443110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorBase
+  startingState: 1
+  button: {fileID: 0}
+  lever: {fileID: 0}
