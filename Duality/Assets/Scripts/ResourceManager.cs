@@ -4,7 +4,7 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
     [SerializeField] private int movementValue = 0;
-    public static ResourceManager Instance { get; set; }
+    public static ResourceManager Instance { get; private set; }
 
     [SerializeField] private int increase = 1;
     private void Awake()

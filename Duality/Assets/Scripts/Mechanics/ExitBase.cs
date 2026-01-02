@@ -10,7 +10,6 @@ public class ExitBase : MonoBehaviour
     {
         if (collision.CompareTag("Player")) 
         {
-            Debug.Log("Here");
             ChangeScene();
         }
     }

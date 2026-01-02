@@ -6,14 +6,16 @@ public class ButtonBase : MonoBehaviour
 {
     [SerializeField] private float pressDis = 0.1f;
 
-    [SerializeField] private DoorBase door;
+
+    public event Action OnButtonPress;
+    public event Action OnButtonRelease;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Box"))
         {
             transform.position = new Vector3 (transform.position.x, transform.position.y - (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
-            door.Open();
+            OnButtonPress?.Invoke();
         }
         
     }
@@ -23,7 +25,7 @@ public class ButtonBase : MonoBehaviour
         if (collision.CompareTag("Box"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
-            door.Close();
+            OnButtonRelease?.Invoke();
         }
     }
 
