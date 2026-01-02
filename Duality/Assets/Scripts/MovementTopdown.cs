@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.ComponentModel.Design;
 
 public class MovementTopdown : MovementBase {
     [SerializeField] private float moveSpeed;
     private Transform movePoint;
     private float resetTimer = 0.0f;
+    private bool moved = true;
 
     private void Start() {
         movePoint = transform.GetChild(0);
@@ -20,7 +22,14 @@ public class MovementTopdown : MovementBase {
             direction.y = Mathf.Sign(input.y);
     }
 
-    protected override void Move(Vector2 direction) {
+    protected override void CancelInput(InputAction.CallbackContext context)
+    {
+        base.CancelInput(context);
+        moved = false;
+    }
+
+    protected override void Move() {
+        Debug.Log(moved);
         rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
         Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
 
@@ -38,6 +47,11 @@ public class MovementTopdown : MovementBase {
         }
         if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
         
-        movePoint.position += dir * TopdownManager.Instance.gridSize;
+        
+        if (!moved && ResourceManager.Instance.UseValue())
+        {
+            movePoint.position += dir * TopdownManager.Instance.gridSize;
+            moved = true;
+        }
     }
 }
