@@ -35,7 +35,6 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void Move() {
-        Debug.Log(direction);
         rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
         Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
 
@@ -52,8 +51,8 @@ public class MovementTopdown : MovementBase {
             rb.linearVelocity = Vector3.zero;
         }
         if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
-        
+
+
         movePoint.position += dir * TopdownManager.Instance.gridSize;
-        direction = Vector2.zero;
     }
 }
