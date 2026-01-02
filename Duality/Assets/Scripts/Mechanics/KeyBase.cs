@@ -11,7 +11,7 @@ public class KeyBase : MonoBehaviour
         {
             door.Open();
             this.gameObject.SetActive(false);
-            Debug.Log("Here");
+           
         }
 
     }
