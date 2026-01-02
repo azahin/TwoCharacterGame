@@ -7,7 +7,7 @@ public class MovementTopdown : MovementBase {
     [SerializeField] private float moveSpeed;
     private Transform movePoint;
     private float resetTimer = 0.0f;
-    private bool moved = true;
+    private bool moved = false;
 
     private void Start() {
         movePoint = transform.GetChild(0);
@@ -15,6 +15,12 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void GetInput(InputAction.CallbackContext context) {
+        if (moved || !ResourceManager.Instance.UseValue())
+        {
+            direction = Vector2.zero;
+            return;
+        }
+        moved = true;
         Vector2 input = context.ReadValue<Vector2>();
         if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
             direction.x = Mathf.Sign(input.x);
@@ -40,7 +46,7 @@ public class MovementTopdown : MovementBase {
             resetTimer -= Time.deltaTime;
             return;
         } else {
-            resetTimer = 0.3f;
+            resetTimer = 0.3f;direction = Vector2.zero;
             TopdownManager.Instance.SnapToGrid(rb);
             rb.linearVelocity = Vector3.zero;
         }

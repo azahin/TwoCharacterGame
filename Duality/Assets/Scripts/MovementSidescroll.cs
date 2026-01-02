@@ -25,11 +25,9 @@ public class MovementSidescroll : MovementBase {
         rb.AddForceX(direction.x * moveForce, ForceMode2D.Force);
         rb.AddForceX(-rb.linearVelocity.x * dragHorizontal, ForceMode2D.Force);
 
-        bool isGrounded = Physics2D.CircleCast(
-            transform.position,
-            body.radius,
-            Vector2.down,
-            0.1f,
+        bool isGrounded = Physics2D.OverlapCircle(
+            (Vector2)transform.position + Vector2.down * body.radius,
+            body.radius * 0.2f,
             LayerMask.GetMask("Obstacle", "Pushable")
         );
         if (isGrounded && (direction.y > 0.9f)) {
