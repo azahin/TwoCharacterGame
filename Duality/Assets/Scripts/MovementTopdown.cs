@@ -7,7 +7,7 @@ public class MovementTopdown : MovementBase {
     [SerializeField] private float moveSpeed;
     private Transform movePoint;
     private float resetTimer = 0.0f;
-    private bool moved = true;
+    private bool moved = false;
 
     private void Start() {
         movePoint = transform.GetChild(0);
@@ -15,6 +15,12 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void GetInput(InputAction.CallbackContext context) {
+        if (moved || !ResourceManager.Instance.UseValue())
+        {
+            direction = Vector2.zero;
+            return;
+        }
+        moved = true;
         Vector2 input = context.ReadValue<Vector2>();
         if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
             direction.x = Mathf.Sign(input.x);
@@ -29,7 +35,7 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void Move() {
-        Debug.Log(moved);
+        Debug.Log(direction);
         rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
         Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
 
@@ -41,17 +47,13 @@ public class MovementTopdown : MovementBase {
             resetTimer -= Time.deltaTime;
             return;
         } else {
-            resetTimer = 0.3f;
+            resetTimer = 0.3f;direction = Vector2.zero;
             TopdownManager.Instance.SnapToGrid(rb);
             rb.linearVelocity = Vector3.zero;
         }
         if (Physics2D.Raycast(movePoint.position, dir, TopdownManager.Instance.gridSize, LayerMask.GetMask("Obstacle"))) return;
         
-        
-        if (!moved && ResourceManager.Instance.UseValue())
-        {
-            movePoint.position += dir * TopdownManager.Instance.gridSize;
-            moved = true;
-        }
+        movePoint.position += dir * TopdownManager.Instance.gridSize;
+        direction = Vector2.zero;
     }
 }
