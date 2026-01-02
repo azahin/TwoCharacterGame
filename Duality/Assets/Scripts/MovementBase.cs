@@ -11,7 +11,7 @@ public abstract class MovementBase : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        Move(direction);
+        Move();
     }
 
     private void OnEnable() {
@@ -31,5 +31,5 @@ public abstract class MovementBase : MonoBehaviour {
     }
 
     protected abstract void GetInput(InputAction.CallbackContext context);
-    protected abstract void Move(Vector2 direction);
+    protected abstract void Move();
 }
