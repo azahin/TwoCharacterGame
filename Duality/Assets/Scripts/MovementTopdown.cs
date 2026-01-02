@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.ComponentModel.Design;
 
 public class MovementTopdown : MovementBase {
     [SerializeField] private float moveSpeed;
@@ -13,6 +14,10 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void GetInput(InputAction.CallbackContext context) {
+        if (!ResourceManager.Instance.UseValue())
+        {
+            return;
+        }
         Vector2 input = context.ReadValue<Vector2>();
         if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
             direction.x = Mathf.Sign(input.x);

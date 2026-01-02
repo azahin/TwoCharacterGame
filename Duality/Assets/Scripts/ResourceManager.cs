@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    private int movementValue = 0;
+    [SerializeField] private int movementValue = 0;
     public static ResourceManager Instance { get; set; }
 
     [SerializeField] private int increase = 1;
@@ -22,12 +22,12 @@ public class ResourceManager : MonoBehaviour
         movementValue += increase;
     }
 
-    public bool UseValue(int value)
+    public bool UseValue()
     {
         bool endState = false;
-        if (movementValue >= 0)
+        if (movementValue >= 1)
         {
-            movementValue -= value;
+            movementValue -= 1;
             endState = true;
         }
         return endState;
