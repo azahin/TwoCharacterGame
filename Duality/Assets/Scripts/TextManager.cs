@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class TextManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private float textTime;
     private GameObject textboxInstance;
     private float textCountdown;
+    private readonly Queue<string> textQueue = new Queue<string>();
 
     public static TextManager Instance { get; private set; }
     private void Awake()
@@ -26,13 +28,21 @@ public class TextManager : MonoBehaviour
             Destroy(textboxInstance);
             textboxInstance = null;
         }
+
+        if (!textboxInstance && textQueue.Count > 0) {
+            ShowText();
+            textCountdown = textTime;
+        }
     }
 
-    public void ShowText(string newText) {
-        Destroy(textboxInstance);
-        textboxInstance = null;
+    private void ShowText() {
         textboxInstance = Instantiate(textboxPrefab, transform);
-        textboxInstance.GetComponentInChildren<TextMeshProUGUI>().text = newText;
-        textCountdown = textTime;
+        textboxInstance
+            .GetComponentInChildren<TextMeshProUGUI>()
+            .text = textQueue.Dequeue();
+    }
+
+    public void QueueText(string newText)  {
+        textQueue.Enqueue(newText);
     }
 }

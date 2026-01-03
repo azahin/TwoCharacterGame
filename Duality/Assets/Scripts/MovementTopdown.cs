@@ -46,7 +46,8 @@ public class MovementTopdown : MovementBase {
             resetTimer -= Time.deltaTime;
             return;
         } else {
-            resetTimer = 0.3f;direction = Vector2.zero;
+            resetTimer = 0.3f;
+            direction = Vector2.zero;
             TopdownManager.Instance.SnapToGrid(rb);
             rb.linearVelocity = Vector3.zero;
         }
