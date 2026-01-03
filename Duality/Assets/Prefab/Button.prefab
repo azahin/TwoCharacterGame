@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -9034024255245367701, guid: 74ec46cf09767914a94decd3fa41c6d7, type: 3}
   m_Color: {r: 0.9433962, g: 0.35154858, b: 0.35154858, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBase
   pressDis: 0.1
-  door: {fileID: 0}
 --- !u!50 &922267185997907848
 Rigidbody2D:
   serializedVersion: 5
