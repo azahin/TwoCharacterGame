@@ -35,7 +35,6 @@ public class MovementTopdown : MovementBase {
     }
 
     protected override void Move() {
-        Debug.Log(direction);
         rb.linearVelocity = moveSpeed * (movePoint.position - transform.position);
         Vector3 dir = new Vector3(direction.x, direction.y, 0.0f);
 
@@ -47,7 +46,8 @@ public class MovementTopdown : MovementBase {
             resetTimer -= Time.deltaTime;
             return;
         } else {
-            resetTimer = 0.3f;direction = Vector2.zero;
+            resetTimer = 0.3f;
+            direction = Vector2.zero;
             TopdownManager.Instance.SnapToGrid(rb);
             rb.linearVelocity = Vector3.zero;
         }
