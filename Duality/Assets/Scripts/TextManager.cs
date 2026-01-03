@@ -22,7 +22,6 @@ public class TextManager : MonoBehaviour
     }
 
     private void Update() {
-        Debug.Log(textQueue.Count);
         textCountdown -= Time.deltaTime;
         if (textCountdown <= 0.0f) {
             textCountdown = 0.0f;
