@@ -38,26 +38,26 @@ public class LeverBase : MonoBehaviour
         {
             OnLeverOff?.Invoke();
             isActive = 0;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, 180f);
+            
         }
         if (state == 0 && !inverse)
         {
             OnLeverOn?.Invoke();
             isActive = 1;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, 180f);
+            
         }
         if (state == 0 && inverse)
         {
 
             OnLeverOff?.Invoke();
             isActive = 0;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, 180f);
+            
         }
         if (state == 1 && inverse)
         {
             OnLeverOn?.Invoke();
             isActive = 1;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, 180f);
+            
         }
 
     }

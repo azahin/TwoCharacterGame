@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class ResourceManager : MonoBehaviour
     public static ResourceManager Instance { get; private set; }
 
     [SerializeField] private int increase = 1;
+
+    public event Action movementValueChanged;
+
     private void Awake()
     {
         if (Instance == null)
@@ -14,12 +18,14 @@ public class ResourceManager : MonoBehaviour
             Instance = this;
             return;
         }
-        Destroy(gameObject);
+        else { Destroy(gameObject); }
     }
 
     public void AddValue()
     {
         movementValue += increase;
+        if (movementValue > 50) { movementValue = 50; }
+        movementValueChanged?.Invoke();
     }
 
     public bool UseValue()
@@ -29,6 +35,7 @@ public class ResourceManager : MonoBehaviour
         {
             movementValue -= 1;
             endState = true;
+            movementValueChanged?.Invoke();
         }
         return endState;
     }
