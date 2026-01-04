@@ -9,6 +9,7 @@ public class MovementTopdown : MovementBase {
     private float resetTimer = 0.0f;
     private bool moved = false;
 
+
     private void Start() {
         movePoint = transform.GetChild(0);
         movePoint.parent = null;

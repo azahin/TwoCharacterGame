@@ -10,7 +10,7 @@ public class KeyBase : MonoBehaviour
         if (collision.CompareTag("Door"))
         {
             door.Open();
-            this.gameObject.SetActive(false);
+            gameObject.SetActive(false);
            
         }
 
