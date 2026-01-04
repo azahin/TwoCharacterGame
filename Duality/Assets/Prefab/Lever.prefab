@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4372607098390511585}
   - component: {fileID: 7892888986758835451}
-  - component: {fileID: 6614452064722401396}
   - component: {fileID: 137593863296867729}
+  - component: {fileID: 5846350421683633172}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4156718117196208269}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.13795067, w: 0.9904391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.21, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7892888986758835451
 SpriteRenderer:
   serializedVersion: 2
@@ -93,8 +93,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!60 &6614452064722401396
-PolygonCollider2D:
+--- !u!114 &137593863296867729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156718117196208269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a2469d0ec7cdf4da68cbb97feead38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LeverBase
+  canToggle: 0
+  oneTime: 0
+  inverse: 0
+--- !u!61 &5846350421683633172
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,25 +152,5 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.25}
-      - {x: -0.5, y: 0}
-      - {x: 0, y: -0.25}
-      - {x: 0.5, y: 0}
-  m_UseDelaunayMesh: 1
---- !u!114 &137593863296867729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4156718117196208269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8a2469d0ec7cdf4da68cbb97feead38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LeverBase
-  canToggle: 0
-  oneTime: 0
-  inverse: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
