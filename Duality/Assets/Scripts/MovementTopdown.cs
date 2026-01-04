@@ -11,7 +11,7 @@ public class MovementTopdown : MovementBase {
 
     public Animator animatorTop;
     private int timer = 0;
-    [SerializeField] int timerReset = 30;
+    [SerializeField] int timerReset;
 
     private void Start() {
         movePoint = transform.GetChild(0);
