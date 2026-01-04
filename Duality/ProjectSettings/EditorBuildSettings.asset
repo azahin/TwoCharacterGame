@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/PuzzleTest1.unity
+    path: Assets/Scenes/PT1.unity
     guid: 64ea68085e8ebd344a333460ddae92fe
   - enabled: 1
     path: Assets/Scenes/PT2.unity
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PT5.unity
     guid: 71d56709c8674cf4eba2015dff1cdce0
+  - enabled: 1
+    path: Assets/Scenes/END.unity
+    guid: 3183bbcc2be7cfc448c3a529f56fcac7
+  - enabled: 1
+    path: Assets/Scenes/START.unity
+    guid: d55cb154b02d6f84dbc6b72ee355f6dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

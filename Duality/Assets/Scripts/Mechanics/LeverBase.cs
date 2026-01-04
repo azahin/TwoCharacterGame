@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class LeverBase : MonoBehaviour
 {
-    //[SerializeField] private DoorBase door;
+
+    [SerializeField] private Sprite on;
+    [SerializeField] private Sprite off;
+
     [SerializeField] private bool canToggle;
     [SerializeField] private bool oneTime;
     [SerializeField] private bool inverse;
@@ -37,27 +40,31 @@ public class LeverBase : MonoBehaviour
         if (state == 1 && !inverse)
         {
             OnLeverOff?.Invoke();
-            isActive = 0;
-            
+            isActive = 0; 
+            transform.GetComponent<SpriteRenderer>().sprite = off;
+
         }
         if (state == 0 && !inverse)
         {
             OnLeverOn?.Invoke();
             isActive = 1;
-            
+            transform.GetComponent<SpriteRenderer>().sprite = on;
+
         }
         if (state == 0 && inverse)
         {
 
             OnLeverOff?.Invoke();
             isActive = 0;
-            
+            transform.GetComponent<SpriteRenderer>().sprite = off;
+
         }
         if (state == 1 && inverse)
         {
             OnLeverOn?.Invoke();
             isActive = 1;
-            
+            transform.GetComponent<SpriteRenderer>().sprite = on;
+
         }
 
     }

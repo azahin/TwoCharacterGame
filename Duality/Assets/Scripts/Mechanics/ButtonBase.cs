@@ -4,7 +4,8 @@ using UnityEngine.Events;
 
 public class ButtonBase : MonoBehaviour
 {
-    [SerializeField] private float pressDis = 0.1f;
+    [SerializeField] private Sprite normal;
+    [SerializeField] private Sprite pressed;
 
 
     public event Action OnButtonPress;
@@ -14,7 +15,8 @@ public class ButtonBase : MonoBehaviour
     {
         if (collision.CompareTag("Box"))
         {
-            transform.position = new Vector3 (transform.position.x, transform.position.y - (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+            transform.GetComponent<SpriteRenderer>().sprite = pressed;
             OnButtonPress?.Invoke();
         }
         
@@ -24,7 +26,8 @@ public class ButtonBase : MonoBehaviour
     {
         if (collision.CompareTag("Box"))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + (GetComponent<Renderer>().bounds.size.y * pressDis), transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
+            transform.GetComponent<SpriteRenderer>().sprite = normal;
             OnButtonRelease?.Invoke();
         }
     }

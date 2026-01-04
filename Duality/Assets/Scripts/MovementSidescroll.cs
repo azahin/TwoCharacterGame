@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal.Filters;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,8 +7,11 @@ public class MovementSidescroll : MovementBase {
     [SerializeField] private float dragHorizontal;
     [SerializeField] private float jumpForce;
 
+    public Animator animatorSide;
+
     private CircleCollider2D body;
 
+    private int timer = 0;
     private void Start() {
         body = GetComponent<CircleCollider2D>();
     }
@@ -18,6 +22,9 @@ public class MovementSidescroll : MovementBase {
             input.x,
             input.y > 0.5 ? 1.0f : 0.0f
         );
+        animatorSide.SetInteger("Movement", (int)direction.x);
+        animatorSide.SetInteger("Jump", (int)direction.y);
+        timer = 0;
     }
 
     protected override void Move() {
@@ -57,6 +64,13 @@ public class MovementSidescroll : MovementBase {
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
             rb.AddForceX(wallDir * jumpForce, ForceMode2D.Impulse);
             direction = new Vector2(direction.x, 0.0f);
+        }
+        timer++;
+        if (timer > 60)
+        {
+            timer = 0;
+            animatorSide.SetInteger("Movement", 0);
+            animatorSide.SetInteger("Jump", 0);
         }
     }
 }
