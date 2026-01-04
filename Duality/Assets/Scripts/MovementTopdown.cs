@@ -9,6 +9,9 @@ public class MovementTopdown : MovementBase {
     private float resetTimer = 0.0f;
     private bool moved = false;
 
+    public Animator animatorTop;
+    private int timer = 0;
+    [SerializeField] int timerReset = 30;
 
     private void Start() {
         movePoint = transform.GetChild(0);
@@ -27,6 +30,9 @@ public class MovementTopdown : MovementBase {
             direction.x = Mathf.Sign(input.x);
         else if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
             direction.y = Mathf.Sign(input.y);
+        animatorTop.SetInteger("MoveX", (int)direction.x);
+        animatorTop.SetInteger("MoveY", (int)direction.y);
+        timer = 0;
     }
 
     protected override void CancelInput(InputAction.CallbackContext context)
@@ -56,5 +62,13 @@ public class MovementTopdown : MovementBase {
 
 
         movePoint.position += dir * TopdownManager.Instance.gridSize;
+
+        timer++;
+        if (timer > 30)
+        {
+            timer = 0;
+            animatorTop.SetInteger("MoveX", 0);
+            animatorTop.SetInteger("MoveY", 0);
+        }
     }
 }

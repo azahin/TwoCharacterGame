@@ -3977,11 +3977,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4027,6 +4031,10 @@ PrefabInstance:
       propertyPath: moveInput
       value: 
       objectReference: {fileID: 541371375}
+    - target: {fileID: 4102527155829865998, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: timerReset
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4742516606084190832, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_Name
       value: Player Topdown
@@ -9135,11 +9143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2788848686968521172, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2788848686968521172, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788848686968521172, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2788848686968521172, guid: 9b11c306cd5ab39c1b01ca7b7bbb4a7c, type: 3}
       propertyPath: m_LocalPosition.x

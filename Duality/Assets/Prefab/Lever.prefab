@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a2469d0ec7cdf4da68cbb97feead38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeverBase
+  on: {fileID: -4454914845596493489, guid: da641a24495ceeb42bb2de0da43de85d, type: 3}
+  off: {fileID: 1694985531360637023, guid: da641a24495ceeb42bb2de0da43de85d, type: 3}
   canToggle: 0
   oneTime: 0
   inverse: 0
