@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8801004512679377809}
   - component: {fileID: 2978590972039560075}
   - component: {fileID: 5967115279482477504}
-  - component: {fileID: 3909365933568542586}
+  - component: {fileID: 7751400823283704893}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -863085938886467031, guid: 74ec46cf09767914a94decd3fa41c6d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79b219ef045d0d04bb9773db6fe26663, type: 3}
   m_Color: {r: 0.5849056, g: 0.1462264, b: 0.5707089, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExitBase
   nextScene: PT2
+  resetInput: {fileID: 0}
 --- !u!61 &5967115279482477504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,19 +154,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!111 &3909365933568542586
-Animation:
+--- !u!95 &7751400823283704893
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4712947769928072706}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9ef64f7d3bfbf549bd58fa10b59a5c4, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_CullingType: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
