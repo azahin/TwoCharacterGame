@@ -18,12 +18,13 @@ public class ResourceManager : MonoBehaviour
             Instance = this;
             return;
         }
-        Destroy(gameObject);
+        else { Destroy(gameObject); }
     }
 
     public void AddValue()
     {
         movementValue += increase;
+        if (movementValue > 50) { movementValue = 50; }
         movementValueChanged?.Invoke();
     }
 

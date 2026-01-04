@@ -12,37 +12,28 @@ public class UIBar : MonoBehaviour
     [SerializeField] private Sprite I4;
     [SerializeField] private Sprite I5;
 
-    [SerializeField] private int set = 0;
 
-    [SerializeField] private ResourceManager manager;
-
-    private Sprite barImage;
+    
     private void Start()
     {
-        barImage = GetComponent<Sprite>();
+        ResourceManager.Instance.movementValueChanged += UpdateImage;
         UpdateImage();
-    }
-
-    private void Awake()
-    {
-        UpdateImage();
-    }
-
-
-    private void OnEnable()
-    {
-        manager.movementValueChanged += UpdateImage;
-    }
-
-    private void OnDisable()
-    {
-        manager.movementValueChanged -= UpdateImage;
-
     }
 
     private void UpdateImage()
     {
-        switch (manager.GetValue()%6)
+        Sprite barImage = I0;
+        int barValue = ResourceManager.Instance.GetValue();
+        
+        int fillBar = 0;
+
+        while (fillBar < barValue / 5)
+        {
+            transform.GetChild(fillBar).GetComponent<Image>().sprite = I5;
+            fillBar++;
+        }
+
+        switch (barValue % 5)
         {
             case 0:
                 barImage = I0;
@@ -59,12 +50,9 @@ public class UIBar : MonoBehaviour
             case 4:
                 barImage = I4;
                 break;
-            case 5:
-                barImage = I5;
-                break;
         }
-
-        gameObject.GetComponent<Image>().sprite = barImage;
+       
+        transform.GetChild(fillBar).GetComponent<Image>().sprite = barImage;
            
     }
 
