@@ -132,6 +132,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "This  light\u2014 it\u2019s blinding me\u2026 But it\u2019s so colourful?
+        I wonder\u2026 where this light leads to?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1
       objectReference: {fileID: 0}
@@ -361,6 +366,18 @@ PrefabInstance:
       propertyPath: resetInput
       value: 
       objectReference: {fileID: 760256488}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.74
@@ -803,6 +820,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5
       objectReference: {fileID: 0}
@@ -877,6 +906,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1526244948882831340, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
+      propertyPath: dialogue
+      value: "Where\u2026 Where am I? How many days of just existence has passed\u2026
+        When\u2026 do I live?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5187460557425907358, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -1535,7 +1569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6720879432329472328, guid: 50559fa05a8724c48b5141d44e053ac6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6720879432329472328, guid: 50559fa05a8724c48b5141d44e053ac6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20027,7 +20061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1270048192948131257, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 1270048192948131257, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20060,6 +20094,11 @@ PrefabInstance:
     - target: {fileID: 2523704056497614928, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
+      propertyPath: dialogue
+      value: "This\u2026 cyber space\u2026 all feels so new. A new world, a new adventure,
+        new emotions\u2026 a new life\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: portalTarget

@@ -610,6 +610,11 @@ PrefabInstance:
       value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
+      propertyPath: dialogue
+      value: "It\u2014 it\u2019s not something I\u2019m missing but\u2026 someone?
+        Mom? Dad? Come back, please\u2026 I\u2019m not ready\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: portalTarget
       value: 
       objectReference: {fileID: 389710753}
@@ -699,6 +704,11 @@ PrefabInstance:
       value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
+      propertyPath: dialogue
+      value: "In my chest\u2026 there\u2019s a void in which an ache echoes\u2026
+        Why does it feel like I\u2019m missing something?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: portalTarget
       value: 
       objectReference: {fileID: 389710753}
@@ -786,11 +796,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalScale.z
@@ -835,6 +845,10 @@ PrefabInstance:
     - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207178291797637500, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102527155829865998, guid: 5669618157fdb1e58a74020d31dddbe1, type: 3}
       propertyPath: moveInput
@@ -16957,6 +16971,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 966382091}
+    - target: {fileID: 1526244948882831340, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
+      propertyPath: dialogue
+      value: "Tires screeching on pavement\u2026 Smoke and sirens\u2026 The pain
+        is piercing me\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 5187460557425907358, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0056708
@@ -17107,6 +17126,18 @@ PrefabInstance:
       propertyPath: resetInput
       value: 
       objectReference: {fileID: 1648589826}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.76

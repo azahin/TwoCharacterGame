@@ -410,6 +410,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "Is\u2026 is this joy? I\u2026 don\u2019t know anymore, I don\u2019t
+        care. I just want to stay here forever, this is all I need."
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1
       objectReference: {fileID: 0}
@@ -689,6 +694,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "Wait\u2014 how many days have passed? But\u2026 does that matter? When
+        I feel so much joy?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1
       objectReference: {fileID: 0}
@@ -919,6 +929,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 110876803}
     - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633549760649231528, guid: 275d20dd47fdaea46a9bf08fe41216b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.42
       objectReference: {fileID: 0}
@@ -1121,6 +1143,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "A world where anything is possible\u2026 so much to see, so much to
+        do, so much to feel\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1

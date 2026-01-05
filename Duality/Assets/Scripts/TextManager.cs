@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TextManager : MonoBehaviour
 {
     [SerializeField] private GameObject textboxPrefab;
-    [SerializeField] private float textTime;
+    private float textTime = 5.0f;
     private GameObject textboxInstance;
     private float textCountdown;
     private readonly Queue<string> textQueue = new Queue<string>();
@@ -43,6 +43,8 @@ public class TextManager : MonoBehaviour
     }
 
     public void QueueText(string newText)  {
+        if (string.IsNullOrEmpty(newText))
+            return;
         textQueue.Enqueue(newText);
     }
 }
