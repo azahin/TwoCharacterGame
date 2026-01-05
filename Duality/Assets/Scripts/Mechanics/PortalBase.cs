@@ -14,6 +14,7 @@ public class PortalBase : MonoBehaviour
             SwitchPerspective(item);
             TextManager.Instance.QueueText(dialogue);
             dialogue = "";
+            AudioManager.Instance.PlaySound("portal");
         }
     }
 

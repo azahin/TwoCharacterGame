@@ -40,6 +40,7 @@ public class LeverBase : MonoBehaviour
     {
         TextManager.Instance.QueueText(dialogue);
         dialogue = "";
+        AudioManager.Instance.PlaySound("lever");
         if (state == 1 && !inverse)
         {
             OnLeverOff?.Invoke();

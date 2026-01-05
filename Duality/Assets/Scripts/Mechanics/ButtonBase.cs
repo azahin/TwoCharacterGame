@@ -21,6 +21,7 @@ public class ButtonBase : MonoBehaviour
             OnButtonPress?.Invoke();
             TextManager.Instance.QueueText(dialogue);
             dialogue = "";
+            AudioManager.Instance.PlaySound("button");
         }
         
     }

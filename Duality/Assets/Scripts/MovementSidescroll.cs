@@ -53,12 +53,14 @@ public class MovementSidescroll : MovementBase {
 
         // Functionality
         if (isGrounded && (direction.y > 0.9f)) {
+            AudioManager.Instance.PlaySound("jump");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0.0f);
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
             direction = new Vector2(direction.x, 0.0f);
         }
 
         if (!isGrounded && (direction.y > 0.9f) && (onLeftWall || onRightWall)) {
+            AudioManager.Instance.PlaySound("jump");
             float wallDir = onLeftWall ? 0.5f : -0.5f;
             rb.linearVelocity = Vector2.zero;
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);

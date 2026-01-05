@@ -23,6 +23,7 @@ public class ResourceManager : MonoBehaviour
 
     public void AddValue()
     {
+        AudioManager.Instance.PlaySound("coin");
         movementValue += increase;
         if (movementValue > 50) { movementValue = 50; }
         movementValueChanged?.Invoke();
@@ -30,6 +31,7 @@ public class ResourceManager : MonoBehaviour
 
     public bool UseValue()
     {
+        AudioManager.Instance.PlaySound("step");
         bool endState = false;
         if (movementValue >= 1)
         {
