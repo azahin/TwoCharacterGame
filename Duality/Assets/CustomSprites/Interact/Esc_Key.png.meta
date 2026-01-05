@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a65d1eca264f4b14ba50b30faece9678
+guid: 7da76dc3d1b7fe465b927439b80278cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3663349373607313613
-    second: ESC_0
-  - first:
-      213: -4695648357470314002
-    second: ESC_1
+      213: -7052700337225374531
+    second: Esc_Key_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,15 +96,28 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ESC_0
+      name: Esc_Key_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 98
+        x: 8
+        y: 11
         width: 84
         height: 79
       alignment: 0
@@ -118,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc0830698d4d6d230800000000000000
-      internalID: 3663349373607313613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ESC_1
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 7
-        width: 84
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee1e5de82b4b5deb0800000000000000
-      internalID: -4695648357470314002
+      spriteID: db4676cf866cf1e90800000000000000
+      internalID: -7052700337225374531
       vertices: []
       indices: 
       edges: []
@@ -160,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ESC_0: 3663349373607313613
-      ESC_1: -4695648357470314002
+      Esc_Key_0: -7052700337225374531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
