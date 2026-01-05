@@ -31,12 +31,12 @@ public class ResourceManager : MonoBehaviour
 
     public bool UseValue()
     {
-        AudioManager.Instance.PlaySound("step");
         bool endState = false;
         if (movementValue >= 1)
         {
             movementValue -= 1;
             endState = true;
+            AudioManager.Instance.PlaySound("step");
             movementValueChanged?.Invoke();
         }
         return endState;
