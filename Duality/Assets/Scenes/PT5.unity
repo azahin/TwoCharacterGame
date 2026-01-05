@@ -1995,6 +1995,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1526244948882831340, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
+      propertyPath: dialogue
+      value: "I just feel so tired\u2026 and aimless\u2026 I\u2019m empty, just going
+        through the motions here\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 4218922227456242986, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
       propertyPath: m_Color.b
       value: 0.63828975
@@ -2075,9 +2080,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1526244948882831340, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
+      propertyPath: dialogue
+      value: "Who\u2026 am I? What am I doing? But then again, what can I do other
+        than this? There\u2019s nothing else\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 5187460557425907358, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.48
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 5187460557425907358, guid: 693ab7f4893381146aa6b8bcb9f55b68, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25682,6 +25692,11 @@ PrefabInstance:
     - target: {fileID: 2523704056497614928, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
+      propertyPath: dialogue
+      value: "Is this all there is? I want to feel anything but I feel nothing\u2026
+        I am empty\u2026 Please help\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6952403608712020704, guid: da6ee43d002a0b24b8d266e7bd3a67b8, type: 3}
       propertyPath: portalTarget

@@ -1665,6 +1665,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "All I see on the paper are big red exes\u2026 I know they all know
+        and I want to hide\u2026 Just disappear\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1
       objectReference: {fileID: 0}
@@ -17248,6 +17253,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "\u201CWe can\u2019t give you anymore chances\u201D\u2026 The voices
+        reek of disappointment as I grip the papers in my hand\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle
       value: 1
       objectReference: {fileID: 0}
@@ -17663,6 +17673,11 @@ PrefabInstance:
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: oneTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
+      propertyPath: dialogue
+      value: "No matter how much I try\u2026 I just can\u2019t concentrate. Sitting
+        on the hard chair staring at the sheets of paper, I keep freezing up\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 137593863296867729, guid: b9690434d90644041a142d54622d9756, type: 3}
       propertyPath: canToggle

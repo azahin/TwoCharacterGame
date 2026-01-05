@@ -12,6 +12,7 @@ public class LeverBase : MonoBehaviour
     [SerializeField] private bool canToggle;
     [SerializeField] private bool oneTime;
     [SerializeField] private bool inverse;
+    [SerializeField] private string dialogue = "";
 
     public event Action OnLeverOn;
     public event Action OnLeverOff;
@@ -37,6 +38,8 @@ public class LeverBase : MonoBehaviour
 
     private void ToggleLever(int state)
     {
+        TextManager.Instance.QueueText(dialogue);
+        dialogue = "";
         if (state == 1 && !inverse)
         {
             OnLeverOff?.Invoke();

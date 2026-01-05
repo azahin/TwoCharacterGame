@@ -4,6 +4,7 @@ using UnityEngine;
 public class PortalBase : MonoBehaviour
 {
     [SerializeField] private Transform portalTarget;
+    [SerializeField] private string dialogue = "";
 
     private void OnTriggerEnter2D(Collider2D collision) {
         PushableItem item = collision.gameObject.GetComponent<PushableItem>();
@@ -11,6 +12,8 @@ public class PortalBase : MonoBehaviour
             item.teleportable = false;
             item.transform.position = portalTarget.position;
             SwitchPerspective(item);
+            TextManager.Instance.QueueText(dialogue);
+            dialogue = "";
         }
     }
 
